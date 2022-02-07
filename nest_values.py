@@ -6,7 +6,7 @@ results_path = 'results_folder'
 positions_path = 'positions_folder'
 input_images_path = 'input_images_folder' 
 gabor_folder = 'gabor_outputs'
-collect_data_folder = 'results_collect_data_freqs_50_y_75'
+collect_data_folder = 'results_collect_data_freqs_50'
 
 
 #Simulation 
