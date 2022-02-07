@@ -1,0 +1,4 @@
+compute-0-13 slots=16
+compute-0-14 slots=16
+compute-0-9 slots=16
+compute-0-8 slots=16
