@@ -21,7 +21,7 @@ from nest_values import *
 from funciones   import *
 
 image_selected = sys.argv[1] 
-Lambda = sys.argv[2] 
+#Lambda = sys.argv[2] 
 
 with open('seed.txt') as f:
     seed = lines = int(f.readlines()[0])
@@ -60,7 +60,8 @@ freqs, peaks, idx = get_frequencies(exc_eeg,'exc','_', path)
 
 
 
-collect_data(image_selected, exc_eeg, inh_eeg, peaks,freqs,idx, seed, Lambda)
+#collect_data(image_selected, exc_eeg, inh_eeg, peaks,freqs,idx, seed, Lambda)
+collect_data(image_selected, exc_eeg, inh_eeg, peaks,freqs,idx, seed)
 
 #################### results for orientations
 

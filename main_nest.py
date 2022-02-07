@@ -20,11 +20,6 @@ import pickle
 import datetime
 import sys
 
-Lambda = int(sys.argv[3]) 
-Sigma = Lambda * 0.36
-max_rescaling_factor_gabor =  int(sys.argv[4])
-
-
 from nest_values import *
 from funciones   import *
 

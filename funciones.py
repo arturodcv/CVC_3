@@ -20,8 +20,8 @@ import sys
 
 from nest_values import *
 
-Lambda = int(sys.argv[3]); Sigma = Lambda * 0.36
-max_rescaling_factor_gabor =  int(sys.argv[4])
+#Lambda = int(sys.argv[3]); Sigma = Lambda * 0.36
+#max_rescaling_factor_gabor =  int(sys.argv[4])
 #################################################### Folders ################################################################
 
 def create_folder(path_name):
@@ -346,11 +346,11 @@ def get_frequencies(eeg,orientation_to_read,exc_or_inh, path):
     plt.close('all')
     return density, peaks, idx
     
-def collect_data(image_selected, exc_eeg, inh_eeg, peaks, freqs, idx, seed, Lambda):
+def collect_data(image_selected, exc_eeg, inh_eeg, peaks, freqs, idx, seed):
     dictionary = {'image_name': image_selected, 'exc_activity': np.sum(exc_eeg), 'inh_activity': np.sum(inh_eeg), 
                   'exc_spikes_from': np.sum(exc_eeg[200:]), 'inh_spikes_from': np.sum(inh_eeg[200:]),
                   'node': peaks[idx][0], 'gamma_power': np.around(sum(freqs[broadband_initial:broadband_end_1]),2) ,
-                  'seed': seed, 'lambda': Lambda,
+                  'seed': seed, 
                   'selected_hypercolumns': radius,
                   'ms_stimulus': ms_per_stimuli, 'neurons_per_column_inh': neurons_per_column_inh,
                   'mean_lat_conn_inh': mean_lat_conn_inh, 
@@ -369,7 +369,7 @@ def collect_data(image_selected, exc_eeg, inh_eeg, peaks, freqs, idx, seed, Lamb
                   }
     now = datetime.now()
     create_folder(collect_data_folder)
-    save_dict(dictionary,collect_data_folder + '/results_' + str(image_selected[1:-4]) +'_'+ str(now)[:-7])
+    save_dict(dictionary,collect_data_folder + '/results_' + str(image_selected) +'_'+ str(now)[:-7])
                   
 def get_kurtosis(data,data_type):
     data_ = data[["x_pos","y_pos"]]
