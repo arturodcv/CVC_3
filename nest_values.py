@@ -6,7 +6,7 @@ results_path = 'results_folder'
 positions_path = 'positions_folder'
 input_images_path = 'input_images_folder' 
 gabor_folder = 'gabor_outputs'
-collect_data_folder = 'results_collect_data_27'
+collect_data_folder = 'results_collect_data_30'
 
 
 #Simulation 
@@ -30,7 +30,7 @@ cortex_size = x_cortex_size * y_cortex_size
 K_size = 900 ;Psi = 0 ; Gamma = 0.7 ; Lambda = 50 ; Sigma = Lambda * 0.36
 cut_pixels = 0
 get_output_gabors = 0
-max_rescaling_factor_gabor = 35
+max_rescaling_factor_gabor = 70
 correct_gamma = 0
 
 #Nest
@@ -100,12 +100,12 @@ rescale = 2.0 ; radius_lat = 2.5
 # Short lateral connections
 ratio_inh_exc_w = 4.0
 p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.1
-p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.1
-p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.4
-p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.6
+p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.05
+p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.3
+p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.5
 
 input_weight_poiss_exc = 1.0     
-input_weight_poiss_inh = 0.1
+input_weight_poiss_inh = 0.2
                
 dict_poiss_to_v1_exc  = {'connection_type': 'divergent','weights': input_weight_poiss_exc ,
                          'mask': {'grid': {'rows': 1, 'columns': 1}}, 
