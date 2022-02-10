@@ -6,7 +6,7 @@ results_path = 'results_folder'
 positions_path = 'positions_folder'
 input_images_path = 'input_images_folder' 
 gabor_folder = 'gabor_outputs'
-collect_data_folder = 'results_collect_data_30'
+collect_data_folder = 'results_collect_data_32'
 
 
 #Simulation 
@@ -87,7 +87,7 @@ syn_model_exc = 'static_synapse_hpc'
 
 #Delays
 delay_exc = 1.0 ; delay_exc_large = 1.0 ; delay_inh = 0.5
-slowness_exc = 1.0; slowness_exc_large = 1.0; slowness_inh = 0.05
+slowness_exc = 0.25; slowness_exc_large = 0.25; slowness_inh = 0.05
 
 
 # Large lateral connections
@@ -101,7 +101,7 @@ rescale = 2.0 ; radius_lat = 2.5
 ratio_inh_exc_w = 4.0
 p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.1
 p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.05
-p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.3
+p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.4
 p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.5
 
 input_weight_poiss_exc = 1.0     
