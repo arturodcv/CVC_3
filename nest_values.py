@@ -101,7 +101,7 @@ rescale = 2.0 ; radius_lat = 2.5
 ratio_inh_exc_w = 4.0
 p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.25
 p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.1
-p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.8
+p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.7
 p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.6
 
 input_weight_poiss_exc = 1.0     
