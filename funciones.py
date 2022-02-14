@@ -346,10 +346,11 @@ def get_frequencies(eeg,orientation_to_read,exc_or_inh, path):
     plt.close('all')
     return density, peaks, idx
     
-def collect_data(image_selected, exc_eeg, inh_eeg, peaks, freqs, idx, seed):
+def collect_data(image_selected, exc_eeg, inh_eeg, peaks_exc, freqs_exc, idx_exc,peaks_tot,freqs_tot,idx_tot, seed):
     dictionary = {'image_name': image_selected, 'exc_activity': np.sum(exc_eeg), 'inh_activity': np.sum(inh_eeg), 
                   'exc_spikes_from': np.sum(exc_eeg[200:]), 'inh_spikes_from': np.sum(inh_eeg[200:]),
-                  'node': peaks[idx][0], 'gamma_power': np.around(sum(freqs[broadband_initial:broadband_end_1]),2) ,
+                  'node_exc': peaks_exc[idx_exc][0], 'gamma_power_exc': np.around(sum(freqs_exc[broadband_initial:broadband_end_1]),2) ,
+                  'node_tot': peaks_tot[idx_tot][0], 'gamma_power_tot': np.around(sum(freqs_tot[broadband_initial:broadband_end_1]),2) ,
                   'seed': seed, 
                   'selected_hypercolumns': radius,
                   'ms_stimulus': ms_per_stimuli, 'neurons_per_column_inh': neurons_per_column_inh,
