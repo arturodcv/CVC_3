@@ -54,7 +54,7 @@ factor_bias = 0.0
 ############ Dictionaries
 
 #Layers
-edge_wrap = True 
+edge_wrap = False #True 
 allow_autapses = True
 allow_multapses = False
   
