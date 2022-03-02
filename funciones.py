@@ -161,9 +161,9 @@ def set_poisson_values(img_dict, poiss_layers,num_orientations):
     for i in range(0,num_orientations):
         orientation = i*180/num_orientations
         filtered_img =  img_dict["orientation_"+str(orientation)]
-
+        bias_value = poisson_bias*factor_bias
         fixed_list = [k * factor if k > 10.0 else (11 - k)**0.1 * k * factor for k in filtered_img]; 
-        fixed_list = [fixed_list[k] if filtered_img[k] > poisson_bias else poisson_bias * factor_bias  for k in range(0,len(fixed_list))]
+        fixed_list = [fixed_list[k] if filtered_img[k] > bias_value  else bias_value  for k in range(0,len(fixed_list))]
 
         l_poiss = list(poiss_layers['orientation_'+str(orientation)]['l_poiss_' + str(orientation)])
         nest.SetStatus(nest.GetNodes(l_poiss)[0],'rate', fixed_list)
