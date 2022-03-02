@@ -46,7 +46,7 @@ poisson_bias = 4.0
 
 #Poisson
 factor = 430.9
-factor_bias = 600.0
+factor_bias = 800.0
 
 ############ Dictionaries
 
@@ -169,7 +169,7 @@ broadband_end_2 = 60
 image_from = int(ms_steady_state_simulation) + 100
 eeg_freqs_from = int(ms_steady_state_simulation) + 200
 eeg_freqs_until = eeg_freqs_from + 500
-radius = 2.5
+radius = 200.5
 make_image_video = 0
 collect_data_bool = 0
 
