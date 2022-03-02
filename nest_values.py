@@ -10,7 +10,7 @@ collect_data_folder = 'results_collect_data_test'
 
 
 #Simulation 
-ms_per_stimuli = 1000.0 #700.0
+ms_per_stimuli = 500.0 #700.0
 simulation_time = ms_per_stimuli * 1 #num_images_to_simulate 
 ms_steady_state_simulation = 0.0
 
@@ -46,7 +46,7 @@ poisson_bias = 4.0
 
 #Poisson
 factor = 430.9
-factor_bias = 800.0
+factor_bias = 700.0
 
 ############ Dictionaries
 
