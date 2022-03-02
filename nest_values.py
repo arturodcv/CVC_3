@@ -6,7 +6,7 @@ results_path = 'results_folder'
 positions_path = 'positions_folder'
 input_images_path = 'input_images_folder' 
 gabor_folder = 'gabor_outputs'
-collect_data_folder = 'results_collect_data_74'
+collect_data_folder = 'results_collect_data_test'
 
 
 #Simulation 
@@ -14,7 +14,7 @@ ms_per_stimuli = 700.0
 simulation_time = ms_per_stimuli * 1 #num_images_to_simulate 
 ms_steady_state_simulation = 0.0
 
-lateral_connections = True
+lateral_connections = False
 
 #Size
 num_hipercolumns = 9
@@ -39,14 +39,14 @@ num_orientations = 4
 
 #Layers
 extent = [float(num_hipercolumns), float(num_hipercolumns)]
-ratio_exc_inh = 4
-neurons_per_column_inh = 5
+ratio_exc_inh = 1
+neurons_per_column_inh = 1
 neurons_per_column_exc = ratio_exc_inh * neurons_per_column_inh 
-poisson_bias = 0.0
+poisson_bias = 4.0
 
 #Poisson
 factor = 430.9
-factor_bias = 0.0
+factor_bias = 20.0
 
 ############ Dictionaries
 
