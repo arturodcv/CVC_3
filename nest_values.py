@@ -46,7 +46,7 @@ poisson_bias = 4.0
 
 #Poisson
 factor = 430.9
-factor_bias = 20.0
+factor_bias = 80.0
 
 ############ Dictionaries
 
@@ -102,7 +102,7 @@ p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.5
 p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.5
 
 input_weight_poiss_exc = 1.0     
-input_weight_poiss_inh = 0.7
+input_weight_poiss_inh = 1.0
                
 dict_poiss_to_v1_exc  = {'connection_type': 'divergent','weights': input_weight_poiss_exc ,
                          'mask': {'grid': {'rows': 1, 'columns': 1}}, 
