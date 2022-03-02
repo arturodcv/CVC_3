@@ -46,7 +46,7 @@ poisson_bias = 4.0
 
 #Poisson
 factor = 430.9
-factor_bias = 700.0
+factor_bias = 600.0
 
 ############ Dictionaries
 
