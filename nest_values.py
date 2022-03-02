@@ -10,7 +10,7 @@ collect_data_folder = 'results_collect_data_test'
 
 
 #Simulation 
-ms_per_stimuli = 700.0
+ms_per_stimuli = 1000.0 #700.0
 simulation_time = ms_per_stimuli * 1 #num_images_to_simulate 
 ms_steady_state_simulation = 0.0
 
