@@ -10,11 +10,11 @@ collect_data_folder = 'results_collect_data_test'
 
 
 #Simulation 
-ms_per_stimuli = 500.0 #700.0
+ms_per_stimuli = 700.0
 simulation_time = ms_per_stimuli * 1 #num_images_to_simulate 
 ms_steady_state_simulation = 0.0
 
-lateral_connections = False
+lateral_connections = True
 
 #Size
 num_hipercolumns = 9
@@ -39,8 +39,8 @@ num_orientations = 4
 
 #Layers
 extent = [float(num_hipercolumns), float(num_hipercolumns)]
-ratio_exc_inh = 1
-neurons_per_column_inh = 1
+ratio_exc_inh = 4
+neurons_per_column_inh = 5
 neurons_per_column_exc = ratio_exc_inh * neurons_per_column_inh 
 poisson_bias = 4.0
 
@@ -98,11 +98,11 @@ rescale = 1.0 ; radius_lat = 3.5#2.5
 ratio_inh_exc_w = 4.0
 p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.1
 p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.1
-p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.5
-p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.5
+p_center_exc_exc = 1.0 ;        weight_exc_exc =  0.4
+p_center_exc_inh = 1.0 ;        weight_exc_inh =  0.4
 
 input_weight_poiss_exc = 1.0     
-input_weight_poiss_inh = 1.0
+input_weight_poiss_inh = 0.7
                
 dict_poiss_to_v1_exc  = {'connection_type': 'divergent','weights': input_weight_poiss_exc ,
                          'mask': {'grid': {'rows': 1, 'columns': 1}}, 
