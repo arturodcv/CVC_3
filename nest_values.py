@@ -104,8 +104,8 @@ rescale = 1.0 ; radius_lat = 3.5#2.5
 
 # Short lateral connections
 ratio_inh_exc_w = 4.0
-p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.25
-p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.05
+p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.2
+p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.1
 p_center_exc_exc = 1.0 ;        #weight_exc_exc =  0.6
 p_center_exc_inh = 1.0 ;        #weight_exc_inh =  1.0
 
