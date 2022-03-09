@@ -162,9 +162,8 @@ def set_poisson_values(img_dict, poiss_layers,num_orientations):
         orientation = i*180/num_orientations
         filtered_img =  img_dict["orientation_"+str(orientation)]
 
-        bias_value = poisson_bias*factor_bias
         fixed_list = [k * factor if k > 10.0 else (11 - k)**0.1 * k * factor for k in filtered_img]; 
-        fixed_list = [fixed_list[k] if filtered_img[k] > poisson_bias  else bias_value  for k in range(0,len(fixed_list))]
+        fixed_list = [fixed_list[k] if filtered_img[k] > poisson_bias else poisson_bias * factor_bias  for k in range(0,len(fixed_list))]
 
         l_poiss = list(poiss_layers['orientation_'+str(orientation)]['l_poiss_' + str(orientation)])
         nest.SetStatus(nest.GetNodes(l_poiss)[0],'rate', fixed_list)
@@ -334,7 +333,7 @@ def get_frequencies(eeg,orientation_to_read,exc_or_inh, path):
     #plt.close('all')
     
     freqs, density = scipy.signal.periodogram(eeg[eeg_freqs_from:eeg_freqs_until],fs = 1000, scaling = 'density');
-    peaks, values = find_peaks(density, height= 0.4, distance = 10); 
+    peaks, values = find_peaks(density, height= 0.01, distance = 10); 
     idx = (- values['peak_heights']).argsort()[:num_max_frequencies]
     
     for node,peak_value in zip(peaks[idx].tolist(), values['peak_heights'][idx].tolist()):
@@ -367,7 +366,8 @@ def collect_data(image_selected, exc_eeg, inh_eeg, peaks_exc, freqs_exc, idx_exc
                   'weight_inh_exc': weight_inh_exc,'p_center_inh_inh': p_center_inh_inh,
                   'weight_inh_inh': weight_inh_inh,'p_center_exc_exc': p_center_exc_exc,
                   'weight_exc_exc': weight_exc_exc,
-                  'p_center_exc_inh': p_center_exc_inh,'weight_exc_inh': weight_exc_inh
+                  'p_center_exc_inh': p_center_exc_inh,'weight_exc_inh': weight_exc_inh,
+                  'input_weight_poiss_inh': input_weight_poiss_inh
                   }
     now = datetime.now()
     create_folder(collect_data_folder)
