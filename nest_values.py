@@ -1,9 +1,8 @@
 import sys
 
 
-weight_exc_exc = float(sys.argv[3])
-weight_exc_inh = float(sys.argv[4])
-input_weight_poiss_inh = float(sys.argv[5])
+weight_exc = float(sys.argv[3])
+weight_inh = float(sys.argv[4])
 
 
 #Paths
@@ -14,7 +13,7 @@ results_path = 'results_folder'
 positions_path = 'positions_folder'
 input_images_path = 'input_images_folder' 
 gabor_folder = 'gabor_outputs'
-collect_data_folder = 'massive_search/results_' + str(weight_exc_exc) + '_' + str(weight_exc_inh) + '_' + str(input_weight_poiss_inh)
+collect_data_folder = 'massive_search_1/results_' + str(weight_exc) + '_' + str(weight_inh) 
 
 
 #Simulation 
@@ -104,13 +103,13 @@ rescale = 1.0 ; radius_lat = 3.5#2.5
 
 # Short lateral connections
 ratio_inh_exc_w = 4.0
-p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * 0.2
-p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * 0.1
-p_center_exc_exc = 1.0 ;        #weight_exc_exc =  0.6
-p_center_exc_inh = 1.0 ;        #weight_exc_inh =  1.0
+p_center_inh_exc = 1.0 ;        weight_inh_exc = - ratio_inh_exc_w * weight_inh
+p_center_inh_inh = 1.0 ;        weight_inh_inh = - ratio_inh_exc_w * weight_inh
+p_center_exc_exc = 1.0 ;        weight_exc_exc =  weight_exc
+p_center_exc_inh = 1.0 ;        weight_exc_inh =  weight_exc
 
 input_weight_poiss_exc = 1.0     
-#input_weight_poiss_inh = 0.2
+input_weight_poiss_inh = 0.3
                
 dict_poiss_to_v1_exc  = {'connection_type': 'divergent','weights': input_weight_poiss_exc ,
                          'mask': {'grid': {'rows': 1, 'columns': 1}}, 
