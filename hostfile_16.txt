@@ -1,6 +1,6 @@
-compute-0-13 slots=10
-compute-0-14 slots=10
-compute-0-16 slots=10
-compute-0-17 slots=10
-compute-0-6 slots=10
-compute-0-7 slots=10
+compute-0-13 slots=16
+compute-0-14 slots=16
+compute-0-16 slots=16
+compute-0-17 slots=16
+compute-0-6 slots=16
+compute-0-7 slots=16
